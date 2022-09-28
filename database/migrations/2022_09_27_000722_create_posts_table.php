@@ -14,7 +14,10 @@ class CreatePostsTable extends Migration
     public function up()
     {
         Schema::create('posts', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->Increments('id');
+            $table->string('img_path')->nullable();
+            $table->string('img_title', 50);
+            $table->string('img_comment', 200)->nullable();
             $table->timestamps();
         });
     }
