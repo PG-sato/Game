@@ -29,14 +29,24 @@ class PostController extends Controller
         //fileパスを配列に格納
         $img = $request->file('post.img_path');
         
+        $input = $request['post'];
+
         $path = Storage::disk('s3')->putFile('vobacket', $img, 'public');
-        dd($path);
-        // $post->img_path = Storage::disk('s3')->url($path);
         
-        // $post->save();
+        $post->img_path = Storage::disk('s3')->url($path);
+        
+        $post->fill($input);
+        
+        $post->save();
         
         // dd($post);
         
+        // dd($post);
+        
+        //dd($post);
+        
+        return redirect('posts/clip');
+
         
     }
 }
