@@ -11,8 +11,11 @@
         @foreach($posts as $post)
         <div class='posts'>
             <div class='post'>
-                <h2 class='title'>{{$post->img_title}}</h2>
-                <p class='body'>{{$post->img_comment}}</p>
+                <h2 class='title'>{{ $post->img_title }}</h2>
+                <p class='body'>{{ $post->img_comment }}</p>
+                
+                <video width="500" src="{{ $post->img_path }}" loop autoplay muted></video>
+                
             </div>
         </div>
         @endforeach
