@@ -7,14 +7,7 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
     </head>
     <body>
-        <h1>動画投稿ページ</h1>
-        @foreach($posts as $post)
-        <div class='posts'>
-            <div class='post'>
-                <h2 class='title'>{{$post->img_title}}</h2>
-                <p class='body'>{{$post->img_comment}}</p>
-            </div>
-        </div>
-        @endforeach
+        <h1>ホーム</h1>
+        <a href='/posts/clip'>動画投稿一覧</a>
     </body>
 </html>
