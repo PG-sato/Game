@@ -1,0 +1,18 @@
+
+.posts{
+    text-align:center;
+}
+
+.post{
+    border-top: solid 4px gray;
+    display: inline-block;
+    border-style :solid double;
+}
+
+.create{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    transition:1s;
+    opacity:0.7;
+}

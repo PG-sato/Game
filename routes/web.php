@@ -18,3 +18,6 @@ Route::get('/posts/clip', 'PostController@clip');
 Route::get('/posts/create', 'PostController@create');
 Route::get('/posts/show', 'PostController@show');
 Route::post('/posts/store', 'PostController@store');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
