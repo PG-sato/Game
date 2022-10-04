@@ -13,11 +13,12 @@ use App\Http\Controllers\PostController;
 |
 */
 
-Route::get('/', 'PostController@home');
-Route::get('/posts/clip', 'PostController@clip');
-Route::get('/posts/create', 'PostController@create');
-Route::get('/posts/show', 'PostController@show');
-Route::post('/posts/store', 'PostController@store');
-Auth::routes();
+Route::group(['middleware' => ['auth']], function(){
+    Route::get('/', 'PostController@home');
+    Route::get('/posts/clip', 'PostController@clip');
+    Route::get('/posts/create', 'PostController@create');
+    Route::get('/posts/show', 'PostController@show');
+    Route::post('/posts/store', 'PostController@store');
+});
 
-Route::get('/home', 'HomeController@index')->name('home');
+Auth::routes();

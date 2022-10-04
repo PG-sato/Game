@@ -7,6 +7,10 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
     </head>
     <body>
+        @extends('layouts.app')
+        
+        @section('content')
+        
         <h1>動画を投稿</h1>
         <form action="/posts/store" method="POST" enctype="multipart/form-data">
         @csrf
@@ -31,7 +35,8 @@
             <input type="submit" value="store"/>
             <a href='/posts/clip'>戻る</a>
         </div>
-                
         </form>
+        
+        @endsection
     </body>
 </html>

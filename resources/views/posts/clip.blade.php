@@ -8,6 +8,10 @@
         <link rel="stylesheet" href="/css/styleclip.css">
     </head>
     <body>
+        @extends('layouts.app')
+        
+        @section('content')
+        
         <center><h1>クリップページ</h1></center>
         @foreach($posts as $post)
         <div class='posts'>
@@ -25,5 +29,7 @@
         <div class='back'>
             <a href='/'>戻る</a>
         </div>
+        
+        @endsection
     </body>
 </html>
