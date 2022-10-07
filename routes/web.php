@@ -14,10 +14,10 @@ use App\Http\Controllers\PostController;
 */
 
 Route::group(['middleware' => ['auth']], function(){
-    Route::get('/', 'PostController@home');
+    Route::get('/', 'PostController@cliphome');
     Route::get('/posts/clip', 'PostController@clip');
     Route::get('/posts/create', 'PostController@create');
-    Route::get('/posts/show', 'PostController@show');
+    Route::get('/posts/{post}', 'PostController@show');
     Route::post('/posts/store', 'PostController@store');
 });
 

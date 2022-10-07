@@ -31,6 +31,7 @@
             <input type="file" name="post[img_path]">
             <p class='img_path_error' style="color:red">{{ $errors->first('post.img_path') }}</p>
         </div>
+        <input name="post[creator_id]" value={{ Auth::user()->id }} hidden>
         <div class="buto">
             <input type="submit" value="store"/>
             <a href='/posts/clip'>戻る</a>
