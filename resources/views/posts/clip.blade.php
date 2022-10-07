@@ -14,12 +14,15 @@
         
         <center><h1>クリップページ</h1></center>
         @foreach($posts as $post)
-        <div class='posts'>
-            <div class='post'>
-                <h2 class='title'>{{ $post->img_title }}</h2>
-                <p class='body'>{{ $post->img_comment }}</p>
-                <video width="500" src="{{ $post->img_path }}" controls loop autoplay=0 muted></video>
-            </div>
+        <div class="posts">
+            <a class="cliplink" href="/posts/{{ $post->id }}">
+                <div class='post'>
+                    <p class="creator_id">{{ $post->creator_id }}さん</p>
+                    <h2 class='title'>{{ $post->img_title }}</h2>
+                    <p class='body'>{{ $post->img_comment }}</p>
+                    <video width="500" src="{{ $post->img_path }}" controls loop autoplay=0 muted></video>
+                </div>
+            </a>
         </div>
         <br>
         @endforeach

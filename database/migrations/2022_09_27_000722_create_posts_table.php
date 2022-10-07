@@ -18,6 +18,7 @@ class CreatePostsTable extends Migration
             $table->string('img_title', 50);
             $table->string('img_comment', 200)->nullable();
             $table->string('img_path');
+            $table->integer('creator_id')->unsigned();
             $table->timestamps();
         });
     }

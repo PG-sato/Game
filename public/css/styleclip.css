@@ -1,6 +1,12 @@
 
 .posts{
+    display:block;
     text-align:center;
+}
+
+.cliplink{
+    color:inherit;
+    text-decoration:none;
 }
 
 .post{
