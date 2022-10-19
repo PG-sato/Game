@@ -11,10 +11,11 @@
 
         @section('content')
         
-        <h1>ゲームマッチングサービスへようこそ</h1>
-        <a href="/posts/clip">《クリップの投げ合いページ》</a>
-        <a class="dropdown-item" href="/posts/prof">プロフィールの編集</a>
-        
+        <div class="profile">
+            <div class="prof_icon">
+                <img src="/storage/profile_icon.png">
+            </div>
+        </div>
         
         @endsection
     </body>

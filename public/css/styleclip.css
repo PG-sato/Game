@@ -22,3 +22,14 @@
     transition:1s;
     opacity:0.7;
 }
+
+.content{
+    display:block;
+    text-align:center;
+}
+
+.content_post{
+    border-top: solid 4px gray;
+    display: inline-block;
+    border-style :solid double;
+}
