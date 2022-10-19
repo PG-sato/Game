@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 use App\Post;
+use App\User;
 use Illuminate\Http\Request;
 use App\Http\Requests\PostRequest;
 use Storage;
+use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
@@ -24,6 +26,12 @@ class PostController extends Controller
 
     public function show(Post $post){
         return view('posts/show')->with(['post' => $post]);
+    }
+    
+    public function prof(User $user){
+        print(Auth::user());
+        dd($user);
+        //return view('posts/prof');
     }
     
     public function store(Post $post, PostRequest $request){
@@ -47,7 +55,10 @@ class PostController extends Controller
         $post->save();
         
         return redirect('posts/clip');
-
-        
+    }
+    
+    public function clip_review()
+    {
+        return $this->belongsTo('App\Clip_review');
     }
 }
