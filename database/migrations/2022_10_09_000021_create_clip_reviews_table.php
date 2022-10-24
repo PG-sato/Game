@@ -13,7 +13,7 @@ class CreateClipReviewsTable extends Migration
      */
     public function up()
     {
-        Schema::create('clipreviews', function (Blueprint $table) {
+        Schema::create('clip_reviews', function (Blueprint $table) {
             $table->Increments('id');
             $table->unsignedInteger('clip_id');
             $table->unsignedInteger('clip_reviewer_id');
@@ -30,6 +30,6 @@ class CreateClipReviewsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('clipreviews');
+        Schema::dropIfExists('clip_reviews');
     }
 }

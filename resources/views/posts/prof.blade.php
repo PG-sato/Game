@@ -13,7 +13,8 @@
         
         <div class="profile">
             <div class="prof_icon">
-                <img src="/storage/profile_icon.png">
+                <img src="{{ asset('storage/'.$user->Profimg_path) }}" alt="プロフィール画像">
+                <p>{{ $user->Profimg_path }}</p>
             </div>
         </div>
         

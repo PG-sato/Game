@@ -2,6 +2,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ClipreviewController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\︎Auth\RegisterController;
 
 /*
@@ -19,11 +20,10 @@ Route::group(['middleware' => ['auth']], function(){
     Route::get('/', 'PostController@cliphome');
     Route::get('/posts/clip', 'PostController@clip');
     Route::get('/posts/create', 'PostController@create');
-    Route::get('/posts/prof', 'Auth\RegisterController@prof');
+    Route::get('/posts/prof', 'UserController@prof');
     //Route::get('/posts/review', [ClipreviewController::class, 'review']);
     Route::get('/posts/review/{post}', 'ClipReviewController@review');
     Route::get('/posts/{post}', 'PostController@show');
-    Route::get('/prof', 'Auth\RegisterController@prof');
     Route::post('/posts/store', 'PostController@store');
     Route::post('/posts/comment', 'ClipReviewController@comment');
 });
