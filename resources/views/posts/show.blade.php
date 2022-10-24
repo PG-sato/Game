@@ -24,6 +24,17 @@
                 <a class="clip_review" href="/posts/review/{{ $post->id }}">コメントを追加する</a>
             </div>
             
+            @foreach($clips as $clip)
+            <div class="clips">
+                <div class="clip">
+                    <p class="comment_user">{{ $clip->id }}　さん</p>
+                    <p class="comment_title">{{ $clip->title }}</p>
+                    <p class="comment_body">{{ $clip->comment }}</p>
+                </div>
+            </div>
+            <br>
+            @endforeach
+            
         </div>
         <div class='back'>
             <a href='/posts/clip'>戻る</a>

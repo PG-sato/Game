@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Post;
 use App\User;
+use App\Clip_review;
 use Illuminate\Http\Request;
 use App\Http\Requests\PostRequest;
 use Storage;
@@ -11,30 +12,37 @@ use Illuminate\Support\Facades\Auth;
 class PostController extends Controller
 {
     
-    public function cliphome(){
+    public function cliphome()
+    {
         return view('posts/cliphome');
     }
     
-    public function clip(Post $post){
+    public function clip(Post $post)
+    {
         //print("ssss");
         return view('posts/clip')->with(['posts' => $post->get()]);
     }
     
-    public function create(){
+    public function create()
+    {
         return view('posts/create');
     }
 
-    public function show(Post $post){
-        return view('posts/show')->with(['post' => $post]);
+    public function show(Post $post, Clip_review $clip)
+    {
+        //dd($clip->get());
+        return view('posts/show')->with(['post' => $post, 'clips' => $clip->get()]);
     }
     
-    public function prof(User $user){
+    public function prof(User $user)
+    {
         print(Auth::user());
         dd($user);
         //return view('posts/prof');
     }
     
-    public function store(Post $post, PostRequest $request){
+    public function store(Post $post, PostRequest $request)
+    {
         //リクエスト取得 post[<name>[中身],．．．]を取得
         $form = $request->all();
         //print($request)

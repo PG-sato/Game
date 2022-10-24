@@ -21,7 +21,8 @@ class ClipreviewController extends Controller
         $clip->clip_reviewer_id = Auth::user()->id;
         $input = $request['user_review'];
         $post = Post::find($input['clip_id']);
-        print($post->id);
+        $clip->fill($input);
+        $clip->save();
         return redirect('posts/'. $post->id)->with(['post' => $post]);
     }
     

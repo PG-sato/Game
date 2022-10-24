@@ -74,11 +74,4 @@ class RegisterController extends Controller
             'Sex' => $data['Sex'],
         ]);
     }
-    
-    public function prof()
-    {
-        print(Auth::user());
-        print(22);
-        //return view('posts/prof');
-    }
 }
