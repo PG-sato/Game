@@ -47,7 +47,7 @@ class PostController extends Controller
         $form = $request->all();
         //print($request)
         //dd($post);
-        // dd($form);
+        dd($form);
         
         //fileパスを配列に格納
         $img = $request->file('post.img_path');
