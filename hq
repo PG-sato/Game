@@ -1,0 +1,179 @@
+[33mcommit b5e6032fe5248c55d15c0acfc9206fc2e6f4d5e7[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31mheroku/master[m[33m)[m
+Author: PG-sato <kokoko012146@gmail.com>
+Date:   Fri Oct 28 22:50:57 2022 +0900
+
+    PostContorollerの修正
+
+[33mcommit 95cd2dea369d79c84ed10dfd1af7d114399b6be4[m
+Author: PG-sato <kokoko012146@gmail.com>
+Date:   Fri Oct 28 20:41:46 2022 +0900
+
+    Procfile for Heroku
+
+[33mcommit 9161c311d5c706b4a367e360832fc25f8a9ca76e[m[33m ([m[1;32mlocal_branch02[m[33m)[m
+Author: PG-sato <kokoko012146@gmail.com>
+Date:   Fri Oct 28 15:55:16 2022 +0900
+
+    heroku用にバージョン合わせ⇨php:^7.2.5:~8.0.0
+
+[33mcommit 8297a29c9745f8d6de6b644861679840ca214088[m[33m ([m[1;31morigin/local_branch01[m[33m)[m
+Author: PG-sato <kokoko012146@gmail.com>
+Date:   Wed Oct 26 14:17:21 2022 +0900
+
+    コミットを戻す
+
+[33mcommit 27d5675d9c94a74d2d6e0ee2a2dd72d6b011d318[m
+Merge: 9f4e535 ea11694
+Author: PG-sato <111450919+PG-sato@users.noreply.github.com>
+Date:   Tue Oct 25 18:29:10 2022 +0900
+
+    Merge pull request #10 from PG-sato/local_branch01
+    
+    GameMatchAppが未追跡のため修正
+
+[33mcommit ea11694f8f7ca1086bb600812fea44aa97fef6c4[m
+Author: PG-sato <kokoko012146@gmail.com>
+Date:   Tue Oct 25 18:27:43 2022 +0900
+
+    GameMatchAppが未追跡のため修正
+
+[33mcommit 9f4e5358c58f4e6bd1eb6a9d8264d55d064fd08e[m
+Merge: a97ce7a 01ac70b
+Author: PG-sato <111450919+PG-sato@users.noreply.github.com>
+Date:   Mon Oct 24 22:11:44 2022 +0900
+
+    Merge pull request #9 from PG-sato/local_branch01
+    
+    ユーザコントローラの追加，編集画面viewの追加，デプロイ化のためのherokuCLIをインストール
+
+[33mcommit 01ac70b6e6e19ad08478ab538ade7f6d83c26572[m
+Author: PG-sato <kokoko012146@gmail.com>
+Date:   Mon Oct 24 22:08:49 2022 +0900
+
+    ユーザコントローラの追加，編集画面viewの追加，デプロイ化のためのherokuCLIをインストール
+
+[33mcommit a97ce7a0588c7b8622a8dc155e3b9085a7c1415a[m
+Merge: 73b49c8 888906c
+Author: PG-sato <111450919+PG-sato@users.noreply.github.com>
+Date:   Thu Oct 20 02:30:58 2022 +0900
+
+    Merge pull request #8 from PG-sato/local_branch01
+    
+    コメント投稿ビューの追加(comment.blade.php)，コメント投稿機能の追加(clip_reviewsテーブルへ追加)
+
+[33mcommit 888906cc809d893a8879c80b92a783547e575296[m
+Author: PG-sato <kokoko012146@gmail.com>
+Date:   Thu Oct 20 02:27:45 2022 +0900
+
+    コメント追あｋビューのの追加，コメント投稿機能の追加
+
+[33mcommit 73b49c8fcbc84dd61c22723fbcac3011c77584fb[m
+Merge: 9fac6b8 f5aff48
+Author: PG-sato <111450919+PG-sato@users.noreply.github.com>
+Date:   Sun Oct 9 22:56:45 2022 +0900
+
+    Merge pull request #7 from PG-sato/local_branch01
+    
+    全テーブルマイグレーションファイルの作成
+
+[33mcommit f5aff487b04e35fbaf174cc631b53b000dd57b7b[m
+Author: PG-sato <kokoko012146@gmail.com>
+Date:   Sun Oct 9 22:55:56 2022 +0900
+
+    全テーブルマイグレーションファイルの作成
+
+[33mcommit 9fac6b8bbdad9991a639e24c4f05061265bfa69a[m
+Merge: 6961415 448857a
+Author: PG-sato <111450919+PG-sato@users.noreply.github.com>
+Date:   Fri Oct 7 12:46:15 2022 +0900
+
+    Merge pull request #6 from PG-sato/local_branch01
+    
+    記事詳細画面の追加｜投稿者が誰かを表示｜認証登録情報の項目を追加
+
+[33mcommit 448857aa1f911a1d7848618db6d8eea70f590bbb[m
+Author: PG-sato <kokoko012146@gmail.com>
+Date:   Fri Oct 7 12:44:42 2022 +0900
+
+    記事詳細画面の追加｜投稿者が誰かを表示｜認証登録情報の項目を追加
+
+[33mcommit 69614155d32012ceee0a484c0f0ce339b76a63d9[m
+Merge: ba65e6a de97ed2
+Author: PG-sato <111450919+PG-sato@users.noreply.github.com>
+Date:   Tue Oct 4 19:13:37 2022 +0900
+
+    Merge pull request #5 from PG-sato/local_branch01
+    
+    認証機能の追加．ログアウト機能の追加．
+
+[33mcommit de97ed20f528f380f9a32b78484ead1bfec3cdc0[m
+Author: PG-sato <kokoko012146@gmail.com>
+Date:   Tue Oct 4 19:12:10 2022 +0900
+
+    認証機能の追加
+
+[33mcommit ba65e6a7b4245dbb6ba2e5ca9ba543073834951b[m
+Merge: 3ed0ca0 0af1af2
+Author: PG-sato <111450919+PG-sato@users.noreply.github.com>
+Date:   Tue Oct 4 11:48:06 2022 +0900
+
+    Merge pull request #4 from PG-sato/local_branch01
+    
+    認証機能の追加．Breezeのインストール．
+
+[33mcommit 0af1af230f618c105281c7ae9cd6699d21ce8b43[m
+Author: PG-sato <kokoko012146@gmail.com>
+Date:   Tue Oct 4 11:44:25 2022 +0900
+
+    認証機能の追加．Breezeのインストール．
+
+[33mcommit 3ed0ca0e27ba98520347ee67b2fa4b92633469bf[m
+Merge: 1e9d1ad b797d82
+Author: PG-sato <111450919+PG-sato@users.noreply.github.com>
+Date:   Thu Sep 29 00:40:04 2022 +0900
+
+    Merge pull request #3 from PG-sato/local_branch01
+    
+    動画投稿機能の追加．　ファイルサイズ上限があるため要修正
+
+[33mcommit b797d82acf4c3c80d5e83764f5260a238394c90f[m
+Author: PG-sato <kokoko012146@gmail.com>
+Date:   Thu Sep 29 00:39:21 2022 +0900
+
+    動画投稿機能の追加．　ファイルサイズ上限があるため要修正
+
+[33mcommit 1e9d1ad4a67e11ca5453cf373af9dd3cacfbb861[m
+Merge: 8b67fd0 a0066f4
+Author: PG-sato <111450919+PG-sato@users.noreply.github.com>
+Date:   Wed Sep 28 21:33:41 2022 +0900
+
+    Merge pull request #2 from PG-sato/local_branch01
+    
+    ホーム，クリップべーじ，クリップ投稿ページと機能の追加．S3のサービスを利用し，動画投稿の際にエラー．
+
+[33mcommit a0066f495dc0314042038790f3319a188bb34f73[m
+Author: PG-sato <kokoko012146@gmail.com>
+Date:   Wed Sep 28 21:32:39 2022 +0900
+
+    ホーム，クリップべーじ，クリップ投稿ページと機能の追加．S3のサービスを利用し，動画投稿の際にエラー．
+
+[33mcommit 8b67fd0db4b3074278541fe0412f5c9bff7c5ba1[m
+Merge: 176d2bc 19495bd
+Author: PG-sato <111450919+PG-sato@users.noreply.github.com>
+Date:   Wed Sep 28 01:52:44 2022 +0900
+
+    Merge pull request #1 from PG-sato/local_branch01
+    
+    S3，バケットなどを追加
+
+[33mcommit 19495bda656d0c9606ca75c532349090113e6abc[m
+Author: PG-sato <kokoko012146@gmail.com>
+Date:   Wed Sep 28 01:50:54 2022 +0900
+
+    S3，バケットなどを追加
+
+[33mcommit 176d2bc76ee6bab8302805682bc98a7923b22f27[m
+Author: PG-sato <kokoko012146@gmail.com>
+Date:   Mon Sep 26 23:27:59 2022 +0900
+
+    First Commit
