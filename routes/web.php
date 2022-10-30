@@ -25,6 +25,7 @@ Route::group(['middleware' => ['auth']], function(){
     Route::get('/posts/review/{post}', 'ClipReviewController@review');
     Route::get('/posts/{post}', 'PostController@show');
     Route::post('/posts/store', 'PostController@store');
+    Route::post('/posts/prof/store', 'UserController@store');
     Route::post('/posts/comment', 'ClipReviewController@comment');
 });
 

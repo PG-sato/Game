@@ -16,7 +16,8 @@ class AddUser extends Migration
         Schema::table('users', function (Blueprint $table) {
             $table->string('Age');
             $table->string('Sex');
-            $table->string('Profimg_path')->default('first.png');
+            $table->string('Profimg_path')->nullable();
+            $table->string('Pr', 200)->nullable();
         });
     }
 
@@ -31,6 +32,7 @@ class AddUser extends Migration
             $table->dropColumn('Age');
             $table->dropColumn('Sex');
             $table->dropColumn('Profimg_path');
+            $table->dropColumn('Pr');
         });
     }
 }

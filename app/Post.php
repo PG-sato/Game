@@ -11,4 +11,9 @@ class Post extends Model
         'img_comment',
         'creator_id',
     ];
+    
+    public function clip_review()
+    {
+        return $this->belongsTo('App\Clip_review');
+    }
 }

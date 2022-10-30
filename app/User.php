@@ -9,6 +9,16 @@ use Illuminate\Notifications\Notifiable;
 class User extends Authenticatable
 {
     use Notifiable;
+    
+    public function updateUserProf($user_id, $Pr, $Profimg_path)
+    {
+        return $this->where([
+                'id'=>(string)$user_id
+            ])->update([
+                'Profimg_path'=>$Profimg_path,
+                'Pr'=>$Pr
+            ]);
+    }
 
     /**
      * The attributes that are mass assignable.
@@ -16,7 +26,13 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'Age', 'Sex', 'profimg_path',
+        'name', 
+        'email', 
+        'password', 
+        'Age',
+        'Sex', 
+        'profimg_path',
+        'Pr',
     ];
 
     /**

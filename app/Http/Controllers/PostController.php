@@ -30,8 +30,8 @@ class PostController extends Controller
 
     public function show(Post $post, Clip_review $clip)
     {
-        //dd($clip->get());
-        return view('posts/show')->with(['post' => $post, 'clips' => $clip->get()]);
+        //dd(Clip_review::where('clip_reviewer_id', '1')->get());
+        return view('posts/show')->with(['post' => $post, 'clips' => Clip_review::where('clip_id', $post->id)->get()]);
     }
     
     public function prof(User $user)
@@ -47,7 +47,7 @@ class PostController extends Controller
         $form = $request->all();
         //print($request)
         //dd($post);
-        dd($form);
+        //dd($form);
         
         //fileパスを配列に格納
         $img = $request->file('post.img_path');
@@ -63,10 +63,5 @@ class PostController extends Controller
         $post->save();
         
         return redirect('posts/clip');
-    }
-    
-    public function clip_review()
-    {
-        return $this->belongsTo('App\Clip_review');
     }
 }
