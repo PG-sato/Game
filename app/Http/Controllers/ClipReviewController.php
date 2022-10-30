@@ -25,10 +25,4 @@ class ClipreviewController extends Controller
         $clip->save();
         return redirect('posts/'. $post->id)->with(['post' => $post]);
     }
-    
-    public function posts()
-    {
-        return $this->hasMany('App\Post');
-    }
-    
 }

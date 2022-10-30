@@ -12,4 +12,9 @@ class Clip_review extends Model
         'title',
         'comment',
     ];
+    
+    public function posts()
+    {
+        return $this->hasMany('App\Post');
+    }
 }

@@ -64,6 +64,17 @@ return [
             'url' => env('AWS_URL'),
             'endpoint' => env('AWS_ENDPOINT'),
         ],
+        
+        's3_profimg' => [
+            'driver' => 's3',
+            'key' => env('AWS_ACCESS_KEY_ID'),
+            'secret' => env('AWS_SECRET_ACCESS_KEY'),
+            'region' => 'ap-northeast-1',
+            'bucket' => 'profimg',
+            'url' => 'https://s3-ap-northeast-1.amazonaws.com/profimg/',
+            'endpoint' => env('AWS_ENDPOINT'),
+        ],
+
 
     ],
 

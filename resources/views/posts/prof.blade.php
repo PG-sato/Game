@@ -11,12 +11,40 @@
 
         @section('content')
         
-        <div class="profile">
-            <div class="prof_icon">
-                <img src="{{ asset('storage/'.$user->Profimg_path) }}" alt="プロフィール画像">
-                <p>{{ $user->Profimg_path }}</p>
+        <form action="/posts/prof/store" method="POST" enctype="multipart/form-data">
+            @csrf
+            
+            <div class="profile">
+                
+                <div class="user_name">
+                    <p>{{ $user->name }}</p>
+                </div>
+                
+                <div class="prof_icon">
+                    @if($user->Profimg_path == null)
+                      <img src="/storage/first.png">
+                    @else
+                      <img src="{{$user->Profimg_path}}">
+                    @endif
+                    <input type="file" name="user[Profimg_path]">
+                    <p>{{ $user->Profimg_path }}</p>
+                </div>
+                
+                <div class="Pr">
+                    <h2>コメント</h2>
+                    <textarea name="user[Pr]" placeholder="コメント">{{ $user->Pr }}</textarea>
+                    <p class='Pr_error' style="color:red">{{ $errors->first('user.Pr') }}</p>
+                </div>
+                
             </div>
-        </div>
+            
+            
+            
+            <div class="button">
+                <input type="submit"/>
+            </div>
+            
+        </form>
         
         @endsection
     </body>
