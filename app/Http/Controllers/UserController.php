@@ -21,7 +21,6 @@ class UserController extends Controller
     public function prof()
     {
         print(Auth::user());
-        print(22);
         $user = Auth::user();
         return view('posts/prof')->with(['user'=>$user]);
     }
@@ -30,19 +29,13 @@ class UserController extends Controller
     {
         //プロフィールアイコンのS3パス
         $image = Auth::user()->Profimg_path;
+        //$img = ImageCreate(100,100);
         
         //S3バケット削除処理
         if($image != null) 
         {
             $base_url = basename($image);
             $s3_delete = Storage::disk('s3_profimg')->delete('profimg/'.$base_url);
-            
-            $image_resize = \Image::make($Profimg_path = Storage::disk('s3_profimg')->url($base_url));
-            dd($image_resize);
-            $image_resize->resize(600, null,
-            function ($constraint) {
-                $constraint->aspectRatio();
-            });
         }
         
         //Pr欄の取得

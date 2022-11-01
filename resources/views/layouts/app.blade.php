@@ -62,7 +62,7 @@
                                     </a>
                                     
                                     <!--プロフ編集の追加-->
-                                    <a class="dropdown-item" href="/prof">プロフィールの編集</a>
+                                    <a class="dropdown-item" href="/posts/prof">プロフィールの編集</a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf

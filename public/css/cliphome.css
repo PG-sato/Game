@@ -1,0 +1,15 @@
+.home_body {
+    display: block;
+    text-align: center;
+    min-height: 100vh;
+    position: relative;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+}
+
+.footer {
+    border-top: 9px dotted red;
+}

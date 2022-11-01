@@ -1,0 +1,28 @@
+.circle_icon img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+/*.icon-circle img{*/
+/*    width: 100%;*/
+/*    height: auto;*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    right: 0;*/
+/*    bottom: 0;*/
+/*    margin: auto;*/
+/*}*/
+
+.profile {
+    display: block;
+    text-align: center;
+}
+
+textarea {
+    width: 50%;
+    height: 50%;
+}
