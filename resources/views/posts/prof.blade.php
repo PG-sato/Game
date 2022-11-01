@@ -5,6 +5,7 @@
         <title>Blog</title>
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        <link rel="stylesheet" href="/css/prof_show.css">
     </head>
     <body>
         @extends('layouts.app')
@@ -17,33 +18,32 @@
             <div class="profile">
                 
                 <div class="user_name">
-                    <p>{{ $user->name }}</p>
+                    <p>{{ $user->name }}　さん</p>
                 </div>
                 
                 <div class="prof_icon">
                     @if($user->Profimg_path == null)
-                      <img src="/storage/first.png">
+                      <figure class="circle_icon"><img src="/storage/first.png"></figure>
                     @else
-                      <img src="{{$user->Profimg_path}}">
+                      <figure class="circle_icon"><img src="{{$user->Profimg_path}}"></figure>
                     @endif
                     <input type="file" name="user[Profimg_path]">
-                    <p>{{ $user->Profimg_path }}</p>
                 </div>
                 
+                <br>
+                
                 <div class="Pr">
-                    <h2>コメント</h2>
-                    <textarea name="user[Pr]" placeholder="コメント">{{ $user->Pr }}</textarea>
+                    <h2>自己紹介</h2>
+                    <textarea name="user[Pr]" placeholder="自己紹介文">{{ $user->Pr }}</textarea>
                     <p class='Pr_error' style="color:red">{{ $errors->first('user.Pr') }}</p>
                 </div>
                 
+                <div class="button">
+                    <input type="submit" value="プロフィールを更新">
+                    <a href='/'>ホームへ</a>
+                </div>
+                
             </div>
-            
-            
-            
-            <div class="button">
-                <input type="submit"/>
-            </div>
-            
         </form>
         
         @endsection
