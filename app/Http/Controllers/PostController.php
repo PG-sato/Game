@@ -55,7 +55,7 @@ class PostController extends Controller
         $path = Storage::disk('s3')->putFile('vobacket', $img, 'public');
         dd($path);
         $post->img_path = Storage::disk('s3')->url($path);
-        
+        dd($post);
         $post->fill($input);
         
         $post->save();
