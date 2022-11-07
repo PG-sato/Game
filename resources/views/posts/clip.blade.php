@@ -20,6 +20,7 @@
                     <p class="creator_id">{{ $post->creator_id }}さん</p>
                     <h2 class='title'>{{ $post->img_title }}</h2>
                     <p class='body'>{{ $post->img_comment }}</p>
+                    <p>{{ $post->img_path }}</p>
                     <video width="500" src="{{ $post->img_path }}" controls loop autoplay=0 muted></video>
                 </div>
             </a>

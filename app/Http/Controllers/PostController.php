@@ -19,8 +19,7 @@ class PostController extends Controller
     
     public function clip(Post $post)
     {
-        //print("ssss");
-        return view('posts/clip')->with(['posts' => $post->get()]);
+        return view('posts/clip')->with(['posts' => $post->all()]);
     }
     
     public function create()
@@ -28,7 +27,7 @@ class PostController extends Controller
         return view('posts/create');
     }
 
-    public function show(Post $post, Clip_review $clip)
+    public function show(Post $post)
     {
         //dd(Clip_review::where('clip_reviewer_id', '1')->get());
         return view('posts/show')->with(['post' => $post, 'clips' => Clip_review::where('clip_id', $post->id)->get()]);
