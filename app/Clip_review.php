@@ -17,4 +17,10 @@ class Clip_review extends Model
     {
         return $this->hasMany('App\Post');
     }
+    
+    public function users()
+    {
+        print("Hello");
+        return $this->hasOne('App\User');
+    }
 }

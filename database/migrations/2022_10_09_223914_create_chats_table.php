@@ -17,6 +17,7 @@ class CreateChatsTable extends Migration
             $table->Increments('id');
             $table->unsignedInteger('sender_user_id');
             $table->unsignedInteger('recipient_user_id');
+            $table->string('message', 200);
             $table->timestamps();
         });
     }

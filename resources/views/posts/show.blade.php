@@ -27,7 +27,8 @@
             @foreach($clips as $clip)
             <div class="clips">
                 <div class="clip">
-                    <p class="comment_user">{{ $clip->id }}　さん</p>
+                    <img width="100" src="{{ $clip->Profimg_path }}">
+                    <p class="comment_user">{{ $clip->clip_reviewer_id }}　さん</p>
                     <p class="comment_title">{{ $clip->title }}</p>
                     <p class="comment_body">{{ $clip->comment }}</p>
                 </div>
