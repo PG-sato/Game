@@ -57,6 +57,8 @@ class PostController extends Controller
         
         $post->img_path = Storage::disk('s3')->url($path);
         
+        dd($post);
+        
         $post->fill($input);
         
         $post->save();

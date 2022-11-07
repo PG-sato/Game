@@ -61,7 +61,7 @@ return [
             'secret' => env('AWS_SECRET_ACCESS_KEY'),
             'region' => 'us-east-1',
             'bucket' => 'vobacket',
-            'url' => 'https://s3-us-east-1.amazonaws.com/vobacket/',
+            'url' => 'https://s3.amazonaws.com/vobacket/',
             'endpoint' => env('AWS_ENDPOINT'),
         ],
         
