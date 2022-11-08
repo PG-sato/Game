@@ -46,6 +46,7 @@ class PostController extends Controller
         $form = $request->all();
         //print($request)
         //dd($post);
+        //dd($form);
         
         //fileパスを配列に格納
         $img = $request->file('post.img_path');
@@ -53,9 +54,9 @@ class PostController extends Controller
         $input = $request['post'];
 
         $path = Storage::disk('s3')->putFile('vobacket', $img, 'public');
-        dd($path);
+        
         $post->img_path = Storage::disk('s3')->url($path);
-        dd($post);
+        
         $post->fill($input);
         
         $post->save();
