@@ -12,9 +12,9 @@ use Illuminate\Support\Facades\Auth;
 class PostController extends Controller
 {
     
-    public function cliphome()
+    public function cliphome(User $user)
     {
-        return view('posts/cliphome');
+        return view('posts/cliphome')->with(['users' => $user->all()]);
     }
     
     public function clip(Post $post)
@@ -29,7 +29,6 @@ class PostController extends Controller
 
     public function show(Post $post)
     {
-        //dd(Clip_review::where('clip_reviewer_id', '1')->get());
         return view('posts/show')->with(['post' => $post, 'clips' => Clip_review::where('clip_id', $post->id)->get()]);
     }
     
@@ -42,13 +41,6 @@ class PostController extends Controller
     
     public function store(Post $post, PostRequest $request)
     {
-        //リクエスト取得 post[<name>[中身],．．．]を取得
-        $form = $request->all();
-        //print($request)
-        //dd($post);
-        //dd($form);
-        
-        //fileパスを配列に格納
         $img = $request->file('post.img_path');
         
         $input = $request['post'];

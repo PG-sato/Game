@@ -4,11 +4,10 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Chat extends Model
+class Follow_user extends Model
 {
     protected $fillable = [
-        'sender_user_id',
-        'recipient_user_id',
-        'message'
+        'follow_id',
+        'follower_id',
     ];
 }
