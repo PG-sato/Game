@@ -19,6 +19,16 @@ class User extends Authenticatable
                 'Pr'=>$Pr
             ]);
     }
+    
+    public function follows()
+    {
+        return $this->belongsToMany('App\User', 'follow_users', 'follower_id', 'user_id');
+    }
+    
+    public function followers()
+    {
+        return $this->belongsToMany('App\User', 'follow_users', 'user_id', 'follower_id');
+    }
 
     /**
      * The attributes that are mass assignable.
@@ -53,8 +63,5 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
     
-    // public function clip_review()
-    // {
-    //     return $this->belongsTo('App\Post');
-    // }
+    
 }

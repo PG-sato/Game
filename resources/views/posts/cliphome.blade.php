@@ -15,7 +15,10 @@
             <div class="home">
                 <h1>ゲームマッチングサービスへようこそ</h1>
                 <a href="/posts/clip">《クリップの投げ合いページ》</a>
+                <a href="/chathome">《個人チャット》</a>
             </div>
+            
+            
             
             <div class="footer">
                 <footer>
