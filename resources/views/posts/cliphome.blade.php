@@ -13,12 +13,33 @@
         @section('content')
         <div class="home_body">
             <div class="home">
-                <h1>ゲームマッチングサービスへようこそ</h1>
+                <h1>ホーム</h1>
                 <a href="/posts/clip">《クリップの投げ合いページ》</a>
                 <a href="/chathome">《個人チャット》</a>
             </div>
             
-            
+            <div class="users">
+                @foreach($users as $user)
+                <div class="user">
+                    @if($user->Profimg_path == null)
+                        <figure class="circle_icon"><img src="/storage/first.png"></figure>
+                    @else
+                        <figure class="circle_icon"><img src="{{$user->Profimg_path}}"></figure>
+                    @endif
+                    
+                    <h2>{{$user->name}}</h2>
+                    
+                    <form action="/users/follow/{{$user->id}}" method="POST" enctype="multipart/form-data">
+                        @if(true)
+                            <input type="submit" value="フォロー">
+                        @else
+                            <p>フォロー済み</p>
+                        @endif
+                    </form>
+                   
+                </div>
+                @endforeach
+            </div>
             
             <div class="footer">
                 <footer>

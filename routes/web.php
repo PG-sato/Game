@@ -30,8 +30,8 @@ Route::group(['middleware' => ['auth']], function(){
     Route::post('/posts/store', 'PostController@store');
     Route::post('/posts/prof/store', 'UserController@store');
     Route::post('/posts/comment', 'ClipReviewController@comment');
-    Route::post('/users/{user}/follow', 'FollowUserController@follow');
-    Route::post('/users/{user}/unfollow', 'FollowUserController@unfollow');
+    Route::post('/users/follow/{user}', 'FollowUserController@follow');
+    Route::post('/users/unfollow/{user}', 'FollowUserController@unfollow');
 });
 
 Auth::routes();

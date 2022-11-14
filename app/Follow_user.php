@@ -10,4 +10,9 @@ class Follow_user extends Model
         'follow_id',
         'follower_id',
     ];
+    
+    public function a()
+    {
+        return true;
+    }
 }
