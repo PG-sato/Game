@@ -13,3 +13,16 @@ footer {
 .footer {
     border-top: 9px dotted red;
 }
+
+.users{
+    display: flex; 
+    flex-wrap: wrap; 
+}
+
+.circle_icon img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}

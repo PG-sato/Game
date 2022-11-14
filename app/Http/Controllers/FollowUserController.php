@@ -15,4 +15,11 @@ class FollowUserController extends Controller
             'follower_id' => $user->id,
         ]);
     }
+    
+    public function unfollow(User $user)
+    {
+        $follow = Follow_user::where('follow_id', Auth::user()->id)->where('follower_id', $user->id)->first();
+        $follow->delete();
+    }
+    
 }

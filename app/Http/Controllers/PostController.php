@@ -8,13 +8,14 @@ use Illuminate\Http\Request;
 use App\Http\Requests\PostRequest;
 use Storage;
 use Illuminate\Support\Facades\Auth;
+use App\Follow_user;
 
 class PostController extends Controller
 {
     
-    public function cliphome(User $user)
+    public function cliphome(User $user, Follow_user $follow)
     {
-        return view('posts/cliphome')->with(['users' => $user->all()]);
+        return view('posts/cliphome')->with(['users' => $user->all(), 'follows' => $follow]);
     }
     
     public function clip(Post $post)
